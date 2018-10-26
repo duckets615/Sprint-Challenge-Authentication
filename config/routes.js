@@ -4,13 +4,15 @@ const jwt = require('jsonwebtoken');
 
 const { authenticate } = require('./middlewares');
 
+const db = require('../database/dbConfig.js');
+
+
 module.exports = server => {
   server.post('/api/register', register);
   server.post('/api/login', login);
   server.get('/api/jokes', authenticate, getJokes);
 };
 
-const db = require('../database/dbConfig.js');
 
 function register(req, res) {
   const creds = req.body;
@@ -32,6 +34,23 @@ function register(req, res) {
         .json(err);
     });
 };
+
+//  JSON token
+const jwtSecret = 'that/s.my.secret.Cap,I/m.always.angry';
+
+function generateToken(user) {
+  const jwtPayload = {
+    ...user,
+    roles: ['admin', 'root'],
+  };
+  const jwtOptions = {
+    expiresIn: '1m',
+  };
+
+  return jwt.sign(jwtPayload, jwtSecret, jwtOptions);
+}
+
+
 
 
 function login(req, res) {
