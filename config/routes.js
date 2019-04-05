@@ -50,3 +50,16 @@ function login(request, response) {
     response.status(500).json(error)
   })
 }
+
+function getJokes(request, response) {
+  axios
+    .get(
+      'https://icanhazdadjoke.com/search'
+    )
+    .then(jokes => {
+      response.status(200).json(jokes.data);
+    })
+    .catch(error => {
+      response.status(500).json({ message: 'Error Fetching Jokes', error: error });
+    });
+}
