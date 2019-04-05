@@ -52,9 +52,12 @@ function login(request, response) {
 }
 
 function getJokes(request, response) {
+  const requestOptions = {
+  headers: { accept: 'application/json' },
+};
   axios
     .get(
-      'https://icanhazdadjoke.com/search'
+      'https://icanhazdadjoke.com/search', requestOptions
     )
     .then(jokes => {
       response.status(200).json(jokes.data);
