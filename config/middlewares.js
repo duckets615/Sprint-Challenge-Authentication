@@ -1,12 +1,5 @@
 const jwt = require("jsonwebtoken");
-
 const jwtKey = require("../_secrets/keys").jwtKey;
-
-// quickly see what this file exports
-module.exports = {
-  authenticate,
-  tokenGeneration
-};
 
 function tokenGeneration(user) {
   const payload = { username: user.username };
@@ -14,7 +7,7 @@ function tokenGeneration(user) {
   return jwt.sign(payload, jwtKey, options);
 }
 
-// implementation details
+
 function authenticate(req, res, next) {
   const token = req.get("Authorization");
 

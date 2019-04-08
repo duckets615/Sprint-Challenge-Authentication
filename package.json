@@ -4,7 +4,8 @@
   "description": "Authentication Sprint Challenge",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "server": "supervisor index.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "sqlite3": "^4.0.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "supervisor": "^0.12.0"
   }
 }
