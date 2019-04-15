@@ -1,6 +1,6 @@
 const { server } = require('./server.js');
 
-const port = process.env.PORT || 3300;
+const port = process.env.PORT || 3300; // run process env port, if nothing there, use 3300
 
 
 server.listen(port, () => {
