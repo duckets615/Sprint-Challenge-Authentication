@@ -1,7 +1,7 @@
-{
-  "name": "auth-challenge",
+''{
+  "name": "Spanish-Conjugation",
   "version": "1.0.0",
-  "description": "Authentication Sprint Challenge",
+  "description": "Build Week: Spanish-Conjugation",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -9,23 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambdaSchool/Sprint-Challenge-Authentication.git"
+    "url": "git+https://github.com/conjugatorbuildweek/spanish-conjugator.git"
   },
   "keywords": [],
   "author": "Lambda School",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LambdaSchool/Sprint-Challenge-Authentication/issues"
+    "url": "https://github.com/conjugatorbuildweek/spanish-conjugator/issues"
   },
-  "homepage": "https://github.com/LambdaSchool/Sprint-Challenge-Authentication#readme",
+  "homepage": "https://github.com/conjugatorbuildweek/spanish-conjugator#readme",
+
   "dependencies": {
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.4",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.3.0",
-    "knex": "^0.15.2",
-    "sqlite3": "^4.0.2"
+    "knex": "^0.16.5",
+    "sqlite3": "^4.0.6"
   },
   "devDependencies": {
     "nodemon": "^1.18.4",
