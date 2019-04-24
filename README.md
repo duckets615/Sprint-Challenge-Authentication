@@ -16,7 +16,7 @@
 ## Start by forking and cloning this repository.
 
 ## Questions - Self Study - You can exercise your Google-Fu for this and any other _Sprint Challenge_ in the future.
-
+adsfas
 1. What is the purpose of using _sessions_?
 2. What does bcrypt do to help us store passwords in a secure manner.
 3. What does bcrypt do to slow down attackers?
